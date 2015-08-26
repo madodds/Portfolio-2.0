@@ -1,18 +1,163 @@
 body {
-  padding-top: 70px;
-  padding-bottom: 30px;
+    padding-top: 70px;
+    padding-bottom: 30px;
 }
 
 .theme-dropdown .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 20px;
+    position: static;
+    display: block;
+    margin-bottom: 20px;
 }
 
 .theme-showcase > p > .btn {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 .theme-showcase .navbar .container {
-  width: auto;
+    width: auto;
 }
+
+.jumbotron {
+    padding-top: 1em;
+    padding-bottom: .61em;
+    margin-bottom: 1em;
+}
+
+    .jumbotron h1 {
+        margin-top: .1%;
+        margin-bottom: .08em;
+    }
+
+    .jumbotron h3 {
+        margin-top: .21em;
+        margin-bottom: .21em;
+    }
+
+.fa {
+    color: black;
+}
+
+/* Re-adjust the font size for small devices. */
+.fa-2x {
+    font-size: 1.75em;
+}
+
+@media (min-width: 326px) {
+    .fa-2x {
+        /* This is the default size. */
+        font-size: 2em;
+    }
+}
+
+/* Applies Inset text for chrome. */
+.qtext-muted {
+    color: #B2B2B2;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-radial-gradient(#888, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    text-shadow: rgba(255,255,255,0.5) 0px 0.025em 0.025em;
+    /* Gordon Hall’s True Inset Text */
+    /* http://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
+
+    /* Workaround for FireFox*/
+    /* http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
+}
+
+span.social-box i.social-inner {
+    transition-duration: .75s;
+    transition-timing-function: ease-out;
+    color: black;
+}
+
+span.social-box i.social-outer {
+    transition-duration: .75s;
+    transition-timing-function: ease-out;
+    color: white;
+}
+
+/* Swap colors on hover */
+span.social-box:hover i.social-inner {
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    color: white;
+}
+
+span.social-box:hover i.social-outer {
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    color: black;
+}
+
+/* quell is like a bootstrap well, except it maintains a 4:3 ration at high resolutions. */
+.qwell-main {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.qwell-bottom {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+    .qwell-wrapper {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+    }
+
+    .qwell-wrapper:after {
+        padding-top: 75%;
+        /* 4:3 ratio, B / (A / 100) = 75% */
+        display: block;
+        content: '';
+    }
+
+    .qwell-main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 19px;
+        min-height: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .qwell-bottom {
+        position: absolute;
+        top: auto;
+        bottom: 19px;
+        right: 0;
+        left: 0;
+        margin-bottom: 0px;
+    }
+}
+
+
+
+/*Setting for a background in jumbotron*/
+/*
+.jumbotron
+{
+    background: url("../images/mountainJeep4.jpg") repeat-x;
+    background-size: 100% auto;
+}
+.jumbotron h1
+{
+    text-shadow: black 0em 0em 0.4em;
+    color: white;
+}
+
+.jumbotron h3
+{
+    text-shadow: black 0em 0em 2.5em;
+    color: white;
+}*/
