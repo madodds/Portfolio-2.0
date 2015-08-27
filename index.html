@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" ng-app="AngularApp">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -134,30 +134,21 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <h2>Sphere Dash</h2>
-                <h4><a href="https://unity3d.com/">Unity</a> 3.7 - Graduation Project 2013</h4>
-                <img src="images/SphereDashImage.png" alt="Sphere Dash Screenshot" class="img-rounded img-responsive center-block">
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <div class="btn-group">
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Watch Demo" href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="#"><i class="fa fa-github fa-2x"></i></a>
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Download Source Code" href="#"><i class="fa fa-download fa-2x"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
                 <h2>Game Idea Generator</h2>
                 <h4><a href="https://angularjs.org/">AngularJS</a> 1.4.4 / C# <a href="https://en.wikipedia.org/wiki/Windows_Forms">Windows Forms</a> - 2015</h4>
-                <div ng-controller="ideaCtrl">
-                    <div class="qwell-wrapper">
-                        <div class="qwell-main">
-                            <div class="qwell-bottom">
-                                <a class="btn btn-default" ng-disabled="getFailed" ng-click="getIdea()">Generate Idea</a>
-                                <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="https://github.com/madodds/Game-Idea-Generator"><i class="fa fa-github-alt fa-lg"></i></a>
-                                <a class="btn btn-default" ng-disabled="noUrl()" ng-href="{{engineUrl}}">Engine Website</a>
+                <div ng-app="AngularApp" ng-controller="ideaCtrl">
+                    <div class="q-well-wrapper">
+                        <div class="q-well-main">
+                            <div class="q-well-bottom">
+                                <div>
+                                    <button class="btn btn-default q-btn-smToDefault" ng-disabled="getFailed" ng-click="getIdea()">Generate Idea</button>
+                                    <a class="btn btn-default q-btn-smToDefault" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="https://github.com/madodds/Game-Idea-Generator"><i class="fa fa-github-alt fa-lg"></i></a>
+                                    <a class="btn btn-default q-btn-smToDefault" ng-disabled="noUrl()" ng-href="{{engineUrl}}">Engine Website</a>
+                                </div>
                             </div>
-                            <p>{{idea}}</p>
-                            <p>{{engineInfo}}</p>
-                            <p class="h1 qtext-muted"><b>{{placeholderText}}</b></p>
+                            <p><span ng-bind="idea"></span></p>
+                            <p><span ng-bind="engineInfo"></span></p>
+                            <p class="h1 q-text-muted"><b><span ng-bind="placeholderText">Loading...</span></b></p>
                         </div>
                     </div>
                </div>
@@ -169,6 +160,17 @@
                     These numbers get placed into the index of 5 arrays: Genres, Perks, Settings, Styles, and Engines.
                 </p>                
                 
+            </div>
+            <div class="col-lg-4">
+                <h2>Sphere Dash</h2>
+                <h4><a href="https://unity3d.com/">Unity</a> 3.7 - Graduation Project 2013</h4>
+                <img src="images/SphereDashImage.png" alt="Sphere Dash Screenshot" class="img-rounded img-responsive center-block">
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <div class="btn-group">
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Watch Demo" href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="#"><i class="fa fa-github fa-2x"></i></a>
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Download Source Code" href="#"><i class="fa fa-download fa-2x"></i></a>
+                </div>
             </div>
             <!--
             <div class="col-lg-4">

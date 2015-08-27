@@ -49,22 +49,6 @@ body {
     }
 }
 
-/* Applies Inset text for chrome. */
-.qtext-muted {
-    color: #B2B2B2;
-    -webkit-text-fill-color: transparent;
-    background: -webkit-radial-gradient(#888, #888);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -moz-background-clip: text;
-    text-shadow: rgba(255,255,255,0.5) 0px 0.025em 0.025em;
-    /* Gordon Hall’s True Inset Text */
-    /* http://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
-
-    /* Workaround for FireFox*/
-    /* http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
-}
-
 span.social-box i.social-inner {
     transition-duration: .75s;
     transition-timing-function: ease-out;
@@ -90,8 +74,42 @@ span.social-box:hover i.social-outer {
     color: black;
 }
 
-/* quell is like a bootstrap well, except it maintains a 4:3 ration at high resolutions. */
-.qwell-main {
+/* Applies Inset text for chrome. */
+.q-text-muted {
+    color: #B2B2B2;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-radial-gradient(#888, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    text-shadow: rgba(255,255,255,0.5) 0px 0.025em 0.025em;
+    /* Gordon Hall’s True Inset Text */
+    /* http://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
+
+    /* Workaround for FireFox*/
+    /* http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
+}
+
+/* This is the small version. Based on .btn-sm in bootstrap, but slightly smaller. */
+.q-btn-smToDefault {
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+
+@media (min-width: 370px) {
+    /* Default Version to override the small version, based on .btn in bootstrap. */
+    .q-btn-smToDefault {
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        border-radius: 4px;
+    }
+}
+
+/* q-well is like a bootstrap .well, except it maintains a 4:3 ration at high resolutions. */
+.q-well-main {
     min-height: 20px;
     padding: 19px;
     margin-bottom: 20px;
@@ -102,25 +120,27 @@ span.social-box:hover i.social-outer {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
 }
 
-.qwell-bottom {
+.q-well-bottom {
     margin-bottom: 10px;
+    margin-top: 5px;
+    white-space: normal;
 }
 
 @media (min-width: 1200px) {
-    .qwell-wrapper {
+    .q-well-wrapper {
         width: 100%;
         display: inline-block;
         position: relative;
     }
 
-    .qwell-wrapper:after {
+    .q-well-wrapper:after {
         padding-top: 75%;
         /* 4:3 ratio, B / (A / 100) = 75% */
         display: block;
         content: '';
     }
 
-    .qwell-main {
+    .q-well-main {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -131,7 +151,7 @@ span.social-box:hover i.social-outer {
         margin-bottom: 0px;
     }
     
-    .qwell-bottom {
+    .q-well-bottom {
         position: absolute;
         top: auto;
         bottom: 19px;
