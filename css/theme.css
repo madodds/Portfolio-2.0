@@ -17,6 +17,19 @@ body {
     width: auto;
 }
 
+.responsive-line-break {
+    visibility: hidden;
+}
+
+@media (max-width: 991px) {
+    .responsive-line-break {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        width: 75%;
+        visibility: visible;
+    }
+}
+
 .jumbotron {
     padding-top: 1em;
     padding-bottom: .61em;
@@ -42,36 +55,38 @@ body {
     font-size: 1.75em;
 }
 
-@media (min-width: 326px) {
+@media (min-width: 345px) {
     .fa-2x {
         /* This is the default size. */
         font-size: 2em;
     }
 }
 
-span.social-box i.social-inner {
+.social-box i.social-inner {
     transition-duration: .75s;
     transition-timing-function: ease-out;
     color: black;
 }
 
-span.social-box i.social-outer {
+.social-box i.social-outer {
     transition-duration: .75s;
     transition-timing-function: ease-out;
     color: white;
+    text-shadow: black 0em 0em 0.1em;
 }
 
 /* Swap colors on hover */
-span.social-box:hover i.social-inner {
+.social-box:hover i.social-inner {
     transition-duration: 0.5s;
     transition-timing-function: ease;
     color: white;
 }
 
-span.social-box:hover i.social-outer {
+.social-box:hover i.social-outer {
     transition-duration: 0.5s;
     transition-timing-function: ease;
     color: black;
+    text-shadow: none;
 }
 
 /* Applies Inset text for chrome. */
@@ -126,7 +141,7 @@ span.social-box:hover i.social-outer {
     white-space: normal;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .q-well-wrapper {
         width: 100%;
         display: inline-block;

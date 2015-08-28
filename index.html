@@ -79,6 +79,12 @@
                     </a>
                 </span>
                 <span class="fa-stack fa-2x social-box">
+                    <a href="https://github.com/madodds/">
+                        <i class="fa fa-square fa-stack-2x social-outer"></i>
+                        <i class="fa fa-github-alt fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View GitHub Profile"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x social-box">
                     <a href="#">
                         <i class="fa fa-square fa-stack-2x social-outer"></i>
                         <i class="fa fa-twitch fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View Twitch Channel"></i>
@@ -90,59 +96,51 @@
                         <i class="fa fa-stack-overflow fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View Stack Overflow Profile"></i>
                     </a>
                 </span>
-                <span class="fa-stack fa-2x social-box">
-                    <a href="https://github.com/madodds/">
-                        <i class="fa fa-square fa-stack-2x social-outer"></i>
-                        <i class="fa fa-github fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View GitHub Profile"></i>
-                    </a>
-                </span>
-                <!-- Saved if I ever decide to add g+ and twitter
-                <span class="fa-stack fa-2x social-box">
-                    <a href="#">
-                        <i class="fa fa-circle fa-stack-2x social-outer"></i>
-                        <i class="fa fa-google-plus fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View g+ Profile"></i>
-                    </a>
-                </span>
-                <span class="fa-stack fa-2x social-box">
-                    <a href="#">
-                        <i class="fa fa-circle fa-stack-2x social-outer"></i>
-                        <i class="fa fa-twitter fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View Twitter Profile"></i>
-                    </a>
-                </span>
-                -->
             </div>
             <!--<div class="fa-hover col-md-3 col-sm-4"><a href="../icon/windows"><i class="fa fa-windows fa-2x"></i></a></div>-->
         </div>
     </div>
-    <!-- TODO:
-        change the images to have a responsive size for faster loading.
-        -->
     <div class="container text-center">
         <h1 id="Projects" class="page-header">Personal Projects</h1>
-        <!-- Example row of columns -->        
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <h2>It Takes a Village</h2>
                 <h4><a href="https://unity3d.com/">Unity</a> 4.6 - <a href="https://globalgamejam.org/">Global Game Jam</a> 2015</h4>
-                <img src="images/ITAVImage.png" alt="It Takes a Village Screenshot" class="img-rounded img-responsive center-block">
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <div class="btn-group">
+                <img src="images/ITAV-512.jpg" alt="It Takes a Village Screenshot" class="img-rounded img-responsive center-block">
+                <p> It Takes a Village (ITAV) is like <a href="#">Twitch Plays Pokemon</a> meets <a href="https://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi</a>. 
+                    ITAV is built to run on a server, streaming to <a href="#">twitch.tv</a>, and accepting commands from the channel's chat group. 
+                    The chat must attempt to keep the pet alive as long as possible by voting on what to do. 
+                </p>
+                <p> This was made for the <a href="#">Global Game Game 2015</a>, so we (a group of 3) only had a weekend to build it.
+                    I later refactored / de-bugged the code and <a href="https://github.com/madodds/GGJ-ItTakesAVillage">put it on GitHub</a>, where you can learn more and see the source code.
+                </p>
+                <div>
                     <!-- TODO: Fix the youtube link -->
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Watch Demo" href="https://youtu.be/CkTIU7_RndQ"><i class="fa fa-youtube-play fa-2x"></i></a>
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="https://github.com/madodds/GGJ-ItTakesAVillage"><i class="fa fa-github fa-2x"></i></a>
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Download Source Code" href="https://github.com/madodds/GGJ-ItTakesAVillage/archive/master.zip"><i class="fa fa-gamepad fa-2x"></i></a>
+                    <span class="fa-stack fa-3x social-box">
+                        <a href="https://youtu.be/CkTIU7_RndQ">
+                            <i class="fa fa-circle fa-stack-2x social-outer"></i>
+                            <i class="fa fa-youtube-play fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="Watch Demo"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack fa-3x social-box">
+                        <a href="https://github.com/madodds/GGJ-ItTakesAVillage">
+                            <i class="fa fa-circle fa-stack-2x social-outer"></i>
+                            <i class="fa fa-github-alt fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View on GitHub"></i>
+                        </a>
+                    </span>
                 </div>
+                <hr class="responsive-line-break" />
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <h2>Game Idea Generator</h2>
-                <h4><a href="https://angularjs.org/">AngularJS</a> 1.4.4 / C# <a href="https://en.wikipedia.org/wiki/Windows_Forms">Windows Forms</a> - 2015</h4>
+                <h4><a href="https://angularjs.org/">AngularJS</a> 1.4.4 / C# <a href="https://en.wikipedia.org/wiki/Windows_Forms">WinForms</a> - 2015</h4>
                 <div ng-app="AngularApp" ng-controller="ideaCtrl">
                     <div class="q-well-wrapper">
                         <div class="q-well-main">
                             <div class="q-well-bottom">
                                 <div>
                                     <button class="btn btn-default q-btn-smToDefault" ng-disabled="getFailed" ng-click="getIdea()">Generate Idea</button>
-                                    <a class="btn btn-default q-btn-smToDefault" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="https://github.com/madodds/Game-Idea-Generator"><i class="fa fa-github-alt fa-lg"></i></a>
+                                    <!--<a class="btn btn-default q-btn-smToDefault" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="https://github.com/madodds/Game-Idea-Generator"><i class="fa fa-github-alt fa-lg"></i></a>-->
                                     <a class="btn btn-default q-btn-smToDefault" ng-disabled="noUrl()" ng-href="{{engineUrl}}">Engine Website</a>
                                 </div>
                             </div>
@@ -152,41 +150,56 @@
                         </div>
                     </div>
                </div>
-                <p>
-                    The Game Idea Generator randomly generates an idea for a video game project. 
+                <p> The Game Idea Generator randomly generates an idea for a video game project. 
                     This was originally written in C# windows forms, which you can find on GitHub. 
-                    </p><p>The idea's attributes are based on the contents of a JSON file on my GitHub account. 
+                </p>
+                <p> The idea's attributes are retrieved from a <a href="https://github.com/madodds/Game-Idea-Generator/blob/master/Attributes.json">JSON file on my GitHub account.</a> 
                     The attributes chosen are based on randomly generated numbers that are unique to each other. 
                     These numbers get placed into the index of 5 arrays: Genres, Perks, Settings, Styles, and Engines.
-                </p>                
-                
+                </p>
+                <span class="fa-stack fa-3x social-box">
+                    <a href="https://github.com/madodds/Game-Idea-Generator">
+                        <i class="fa fa-circle fa-stack-2x social-outer"></i>
+                        <i class="fa fa-github-alt fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View on GitHub"></i>
+                    </a>
+                </span>
+                <hr class="responsive-line-break" />
             </div>
-            <div class="col-lg-4">
+            <div class="clearfix visible-md-block"></div>
+            <div class="col-lg-4 col-md-12">
                 <h2>Sphere Dash</h2>
                 <h4><a href="https://unity3d.com/">Unity</a> 3.7 - Graduation Project 2013</h4>
-                <img src="images/SphereDashImage.png" alt="Sphere Dash Screenshot" class="img-rounded img-responsive center-block">
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <div class="btn-group">
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Watch Demo" href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="#"><i class="fa fa-github fa-2x"></i></a>
-                    <a class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Download Source Code" href="#"><i class="fa fa-download fa-2x"></i></a>
-                </div>
-            </div>
-            <!--
-            <div class="col-lg-4">
-                <h2>Catching Numerators</h2>
-                <h4>Actionscript 3.0 - 2012</h4>
-                <img src="images/FractionsImage.png" alt="Sphere Dash Screenshot" class="img-rounded img-responsive center-block">
-                <p>
-                    Teaching fractions while having fun.
-					The player is given a decimal at the bottom of the screen that they have to match by catching numerators falling from the sky onto their assigned denominator.
-					The denominator increases as the player levels up.
-					Level ups happen when the player has achieved enough right answers relative to the amount of wrong answers.
-					The max denominator is 10.
-					When the 10th is complete the player is given a report card on their performance.
+                <img src="images/SphereDash-512.jpg" alt="Sphere Dash Screenshot" class="img-rounded img-responsive center-block">
+                <p> Sphere Dash is a side-scrolling platformer, where the environment is dynamically created. 
+                    Your objective is to go very fast for as long as possible without falling off. 
+                    There is no limit to how fast you can go.
+                    There are 3 different levels, and a tutorial level. 
                 </p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div> -->
+                <p> This game was originally made in 2012 as a project to learn Unity, but was expanded on as my graduation project. This game was judged as one of the top games of my graduating class.
+                </p>                
+                <div>
+                    <!-- TODO: Fix ALL the links -->
+                    <span class="fa-stack fa-3x social-box">
+                        <a href="#">
+                            <i class="fa fa-circle fa-stack-2x social-outer"></i>
+                            <i class="fa fa-youtube-play fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="Watch Demo"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack fa-3x social-box">
+                        <a href="#">
+                            <i class="fa fa-circle fa-stack-2x social-outer"></i>
+                            <i class="fa fa-gamepad fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="Play Sphere Dash"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack fa-3x social-box">
+                        <a href="#">
+                            <i class="fa fa-circle fa-stack-2x social-outer"></i>
+                            <i class="fa fa-github-alt fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View on GitHub"></i>
+                        </a>
+                    </span>
+                </div>
+                <hr class="responsive-line-break" />
+            </div>
         </div>
     </div>
     <div class="container text-center">
@@ -202,9 +215,7 @@
 
 			I was handed a controller at 2 years old and never stopped playing. I grew up seeking knowledge in game design and music composition. I dreamed of working at Blizzard Entertainment and greatly admired Final Fantasy Composer Nobuo Uematsu. I also represent the top 2% of StarCraft II players in the Americas and South Korea.
         </div>
-
     </div>
-
     <div class="container text-center">
         <div class="page-header" id="Resume">
             <h1>Resume</h1>
@@ -213,7 +224,6 @@
         <div class="row">
         </div>
     </div>
-
     <div class="container text-center">
         <div class="page-header" id="Contact">
             <h1>Contact</h1>
