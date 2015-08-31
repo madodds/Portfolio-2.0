@@ -1,108 +1,129 @@
 body {
-    padding-top: 70px;
-    padding-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 30px;
 }
 
 .theme-dropdown .dropdown-menu {
-    position: static;
-    display: block;
-    margin-bottom: 20px;
+  position: static;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .theme-showcase > p > .btn {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .theme-showcase .navbar .container {
-    width: auto;
+  width: auto;
 }
 
-.responsive-line-break {
-    visibility: hidden;
+td > a:link {
+    color: #333;
+}
+
+td > a:visited {
+    color: #333;
+}
+
+
+.responsive-line-break-md {
+  visibility: hidden;
+}
+
+.responsive-line-break-sm {
+  visibility: hidden;
 }
 
 @media (max-width: 991px) {
-    .responsive-line-break {
-        padding-top: 10px;
-        padding-bottom: 20px;
-        width: 75%;
-        visibility: visible;
-    }
+  .responsive-line-break-md {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 75%;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 767px) {
+  .responsive-line-break-sm {
+    width: 60%;
+    visibility: visible;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
 }
 
 .jumbotron {
-    padding-top: 1em;
-    padding-bottom: .61em;
-    margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: .61em;
+  margin-bottom: 1em;
 }
 
-    .jumbotron h1 {
-        margin-top: .1%;
-        margin-bottom: .08em;
-    }
+  .jumbotron h1 {
+    margin-top: .1%;
+    margin-bottom: .08em;
+  }
 
-    .jumbotron h3 {
-        margin-top: .21em;
-        margin-bottom: .21em;
-    }
+  .jumbotron h3 {
+    margin-top: .21em;
+    margin-bottom: .21em;
+  }
 
 .fa {
-    color: black;
+  color: black;
 }
 
 /* Re-adjust the font size for small devices. */
 .fa-2x {
-    font-size: 1.75em;
+  font-size: 1.75em;
 }
 
 @media (min-width: 345px) {
-    .fa-2x {
-        /* This is the default size. */
-        font-size: 2em;
-    }
+  .fa-2x {
+    /* This is the default size. */
+    font-size: 2em;
+  }
 }
 
 .social-box i.social-inner {
-    transition-duration: .75s;
-    transition-timing-function: ease-out;
-    color: black;
+  transition-duration: .75s;
+  transition-timing-function: ease-out;
+  color: black;
 }
 
 .social-box i.social-outer {
-    transition-duration: .75s;
-    transition-timing-function: ease-out;
-    color: white;
-    text-shadow: black 0em 0em 0.1em;
+  transition-duration: .75s;
+  transition-timing-function: ease-out;
+  color: white;
+  text-shadow: black 0em 0em 0.1em;
 }
 
 /* Swap colors on hover */
 .social-box:hover i.social-inner {
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    color: white;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  color: white;
 }
 
 .social-box:hover i.social-outer {
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    color: black;
-    text-shadow: none;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  color: black;
+  text-shadow: none;
 }
 
 /* Applies Inset text for chrome. */
 .q-text-muted {
-    color: #B2B2B2;
-    -webkit-text-fill-color: transparent;
-    background: -webkit-radial-gradient(#888, #888);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -moz-background-clip: text;
-    text-shadow: rgba(255,255,255,0.5) 0px 0.025em 0.025em;
-    /* Gordon Hall’s True Inset Text */
-    /* http://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
-
-    /* Workaround for FireFox*/
-    /* http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
+  color: #B2B2B2;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-radial-gradient(#888, #888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-background-clip: text;
+  text-shadow: rgba(255,255,255,0.5) 0px 0.025em 0.025em;
+  /* Gordon Hall’s True Inset Text */
+  /* http://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
+  /* Workaround for FireFox*/
+  /* http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
 }
 
 /* This is the small version. Based on .btn-sm in bootstrap, but slightly smaller. */
@@ -114,66 +135,66 @@ body {
 }
 
 @media (min-width: 370px) {
-    /* Default Version to override the small version, based on .btn in bootstrap. */
-    .q-btn-smToDefault {
-        padding: 6px 12px;
-        font-size: 14px;
-        line-height: 1.42857143;
-        border-radius: 4px;
-    }
+  /* Default Version to override the small version, based on .btn in bootstrap. */
+  .q-btn-smToDefault {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+  }
 }
 
 /* q-well is like a bootstrap .well, except it maintains a 4:3 ration at high resolutions. */
 .q-well-main {
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #e3e3e3;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
 }
 
 .q-well-bottom {
-    margin-bottom: 10px;
-    margin-top: 5px;
-    white-space: normal;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  white-space: normal;
 }
 
 @media (min-width: 992px) {
-    .q-well-wrapper {
-        width: 100%;
-        display: inline-block;
-        position: relative;
-    }
+  .q-well-wrapper {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+  }
 
     .q-well-wrapper:after {
-        padding-top: 75%;
-        /* 4:3 ratio, B / (A / 100) = 75% */
-        display: block;
-        content: '';
+      padding-top: 75%;
+      /* 4:3 ratio, B / (A / 100) = 75% */
+      display: block;
+      content: '';
     }
 
-    .q-well-main {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        padding: 19px;
-        min-height: 0px;
-        margin-bottom: 0px;
-    }
-    
-    .q-well-bottom {
-        position: absolute;
-        top: auto;
-        bottom: 19px;
-        right: 0;
-        left: 0;
-        margin-bottom: 0px;
-    }
+  .q-well-main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 19px;
+    min-height: 0px;
+    margin-bottom: 0px;
+  }
+
+  .q-well-bottom {
+    position: absolute;
+    top: auto;
+    bottom: 19px;
+    right: 0;
+    left: 0;
+    margin-bottom: 0px;
+  }
 }
 
 
