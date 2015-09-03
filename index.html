@@ -139,7 +139,7 @@
                         <div class="q-well-main">
                             <div class="q-well-bottom">
                                 <div>
-                                    <button class="btn btn-default q-btn-smToDefault" ng-disabled="getFailed" ng-click="getIdea()">Generate Idea</button>
+                                    <button class="btn btn-default q-btn-smToDefault pulsingShadow" ng-disabled="getFailed" ng-click="getIdea()">Generate Idea</button>
                                     <!--<a class="btn btn-default q-btn-smToDefault" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="https://github.com/madodds/Game-Idea-Generator"><i class="fa fa-github-alt fa-lg"></i></a>-->
                                     <a class="btn btn-default q-btn-smToDefault" ng-disabled="noUrl()" ng-href="{{engineUrl}}">Engine Website</a>
                                 </div>
@@ -217,10 +217,10 @@
                         </thead>
                         <tbody>
                             <tr class="success"><td>C#</td></tr>
-                            <tr class="info"><td>ActionScript 3.0</td></tr>
                             <tr class="info"><td>HTML / CSS</td></tr>
                             <tr class="warning"><td>JavaScript</td></tr>
                             <tr class="warning"><td>Python</td></tr>
+                            <tr class="warning"><td>ActionScript 3.0</td></tr>
                             <tr class="danger"><td>SQL</td></tr>
                             <tr class="danger"><td>C++</td></tr>
                             <tr class="danger"><td>Lua</td></tr>
@@ -254,9 +254,9 @@
                         </thead>
                         <tbody>
                             <tr class="info"><td><a href="https://unity3d.com/">Unity 3D</a></td></tr>
-                            <tr class="info"><td><a href="https://www.adobe.com/products/flash.html">Adobe Flash CS5.5</a></td></tr>
                             <tr class="warning"><td><a href="https://www.yoyogames.com/studio">Game Maker</a></td></tr>
-                            <tr class="warning"><td><a href="https://www.unrealengine.com/what-is-unreal-engine-4">Unreal Engine 4</a></td></tr>
+                            <tr class="warning"><td><a href="https://www.adobe.com/products/flash.html">Adobe Flash CS5.5</a></td></tr>
+                            <tr class="danger"><td><a href="https://www.unrealengine.com/what-is-unreal-engine-4">Unreal Engine 4</a></td></tr>
                             <tr class="danger"><td><a href="https://www.rpgmakerweb.com/">RPG maker</a></td></tr>
                         </tbody>
                     </table>
@@ -285,14 +285,13 @@
         <div class="page-header" id="About">
             <h1>About Me</h1>
         </div>
-        <!-- Example row of columns -->
         <div class="row">
             <div class="col-sm-2 col-xs-12">
                 <img src="images/me6.jpg" alt="My Picture" class="img-circle img-responsive center-block">
                 <hr class="responsive-line-break-sm" />
             </div>
             <div class="col-sm-10 col-xs-12">
-                <p> I am an undergraduate student at University of Colorado at Colorado Springs majoring in Game Design. 
+                <p> <!--I am an undergraduate student at University of Colorado at Colorado Springs majoring in Game Design. 
                     My intended time to graduate is Spring 2013.
 			        My coding languages include: C++, C#/XNA, Python, ActionScript 3.0, HTML/CSS, JavaScript/Ajax
 
@@ -301,8 +300,10 @@
 			        I was handed a controller at 2 years old and never stopped playing. 
                     I grew up seeking knowledge in game design and music composition. 
                     I dreamed of working at Blizzard Entertainment and greatly admired Final Fantasy Composer Nobuo Uematsu. 
-                    I also represent the top 2% of StarCraft II players in the Americas and South Korea.
-
+                    I also represent the top 2% of StarCraft II players in the Americas and South Korea. -->
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
 
                 </p>
             </div>
@@ -312,7 +313,6 @@
         <div class="page-header" id="Resume">
             <h1>Resume</h1>
         </div>
-        <!-- Example row of columns -->
         <div class="row">
             Nope.
         </div>
@@ -321,30 +321,10 @@
         <div class="page-header" id="Contact">
             <h1>Contact</h1>
         </div>
-        <!-- Example row of columns -->
         <div class="row">
             madodds at gmail <i>doot</i> com
         </div>
     </div>
-
-    <!-- /container -->
-    <!--
-				 Tab Content
-				<div class="tab-content">
-					<div class="tab-pane fade in active" id="Projects">
-						<p>First para Hi there
-					</div>
-					<div class="tab-pane fade" id="About">
-						I am awesome.
-					</div>
-					<div class="tab-pane fade" id="Resume">
-						<p>Third para Hi there
-					</div>
-					<div class="tab-pane fade" id="Contact">
-						<p>Fourth para Hi there
-					</div>
-				</div>
-			-->
 
     <!-- Bootstrap core JavaScript
 	================================================== -->
