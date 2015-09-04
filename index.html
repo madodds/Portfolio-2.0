@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <!-- TODO: favIcon -->
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 
     <title>Theme Template for Bootstrap</title>
 
@@ -32,14 +32,14 @@
 </head>
 
 
-<body>
+<body data-spy="scroll" data-target="#navbar-controller">
 
     <!-- Header -->
     <header></header>
 
     <!-- Body -->
     <!-- Nav Bar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -48,9 +48,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Welcome to the Machine</a>
+                <a class="navbar-brand" href="#">DoddsGameDev.net</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div id="navbar-controller" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#Projects">Projects</a></li>
                     <li><a href="#Skills">Skills</a></li>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="jumbotron">
         <div class="container text-center">
             <h1>Matthew Dodds</h1>
@@ -99,19 +99,22 @@
                 </span>
             </div>
         </div>
+        <div id="Projects"></div>
     </div>
     <div class="container text-center">
-        <h1 id="Projects" class="page-header">Personal Projects</h1>
+        <h1 class="page-header">Personal Projects</h1>
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <h2>It Takes a Village</h2>
                 <h4><a href="https://unity3d.com/">Unity</a> 4.6 - <a href="http://globalgamejam.org/2015/games/it-takes-village">Global Game Jam</a> 2015</h4>
                 <img src="images/ITAV-512.jpg" alt="It Takes a Village Screenshot" class="img-rounded img-responsive center-block">
-                <p> It Takes a Village (ITAV) is like <a href="https://en.wikipedia.org/wiki/Twitch_Plays_Pok%C3%A9mon">Twitch Plays Pokemon</a> meets <a href="https://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi</a>. 
+                <p>
+                    It Takes a Village (ITAV) is like <a href="https://en.wikipedia.org/wiki/Twitch_Plays_Pok%C3%A9mon">Twitch Plays Pokemon</a> meets <a href="https://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi</a>. 
                     ITAV is built to run on a server, streaming to <a href="http://www.twitch.tv/">twitch.tv</a>, and accepting commands from the channel's chat group. 
                     The chat must attempt to keep the pet alive as long as possible by voting on what to do. 
                 </p>
-                <p> This was made for the <a href="http://globalgamejam.org/2015/games/it-takes-village">Global Game Jam 2015</a>, so we (a group of 3) only had a weekend to build it.
+                <p>
+                    This was made for the <a href="http://globalgamejam.org/2015/games/it-takes-village">Global Game Jam 2015</a>, so we (a group of 3) only had a weekend to build it.
                     I later refactored / de-bugged the code and <a href="https://github.com/madodds/GGJ-ItTakesAVillage">put it on GitHub</a>, where you can learn more and see the source code.
                 </p>
                 <div>
@@ -149,11 +152,13 @@
                             <p class="h1 q-text-muted"><b><span ng-bind="placeholderText">Loading...</span></b></p>
                         </div>
                     </div>
-               </div>
-                <p> The Game Idea Generator randomly generates an idea for a video game project. 
+                </div>
+                <p>
+                    The Game Idea Generator randomly generates an idea for a video game project. 
                     This was originally written in C# windows forms, which you can find on GitHub. 
                 </p>
-                <p> The idea's attributes are retrieved from a <a href="https://github.com/madodds/Game-Idea-Generator/blob/master/Attributes.json">JSON file on my GitHub account.</a> 
+                <p>
+                    The idea's attributes are retrieved from a <a href="https://github.com/madodds/Game-Idea-Generator/blob/master/Attributes.json">JSON file on my GitHub account.</a>
                     The attributes chosen are based on randomly generated numbers that are unique to each other. 
                     These numbers get placed into the index of 5 arrays: Genres, Perks, Settings, Styles, and Engines.
                 </p>
@@ -170,13 +175,15 @@
                 <h2>Sphere Dash</h2>
                 <h4><a href="https://unity3d.com/">Unity</a> 3.7 - Graduation Project 2013</h4>
                 <img src="images/SphereDash-512.jpg" alt="Sphere Dash Screenshot" class="img-rounded img-responsive center-block">
-                <p> Sphere Dash is a side-scrolling platformer, where the environment is dynamically created. 
+                <p>
+                    Sphere Dash is a side-scrolling platformer, where the environment is dynamically created. 
                     Your objective is to go very fast for as long as possible without falling off. 
                     There is no limit to how fast you can go.
                     There are 3 different levels, and a tutorial level. 
                 </p>
-                <p> This game was originally made in 2012 as a project to learn Unity, but was expanded on as my graduation project. This game was judged as one of the top games of my graduating class.
-                </p>                
+                <p>
+                    This game was originally made in 2012 as a project to learn Unity, but was expanded on as my graduation project. This game was judged as one of the top games of my graduating class.
+                </p>
                 <div>
                     <!-- TODO: Fix ALL the links -->
                     <span class="fa-stack fa-3x social-box">
@@ -202,9 +209,11 @@
             </div>
         </div>
     </div>
-    
+    <div id="Skills">
+        <br />
+    </div>
     <div class="container text-center">
-        <div class="page-header" id="Skills">
+        <div class="page-header">
             <h1>Skills</h1>
         </div>
         <h4>My skills are listed below in categories, starting from the top at most confident <span class="text-success">(green),</span> to least confident <span class="text-danger">(red)</span>.</h4>
@@ -213,17 +222,35 @@
                 <div class="panel panel-default">
                     <table class="table table-hover">
                         <thead>
-                            <tr><th class="text-center">Programming Languages</th></tr>
+                            <tr>
+                                <th class="text-center">Programming Languages</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr class="success"><td>C#</td></tr>
-                            <tr class="info"><td>HTML / CSS</td></tr>
-                            <tr class="warning"><td>JavaScript</td></tr>
-                            <tr class="warning"><td>Python</td></tr>
-                            <tr class="warning"><td>ActionScript 3.0</td></tr>
-                            <tr class="danger"><td>SQL</td></tr>
-                            <tr class="danger"><td>C++</td></tr>
-                            <tr class="danger"><td>Lua</td></tr>
+                            <tr class="success">
+                                <td>C#</td>
+                            </tr>
+                            <tr class="info">
+                                <td>HTML / CSS</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>JavaScript</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>Python</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>ActionScript 3.0</td>
+                            </tr>
+                            <tr class="danger">
+                                <td>SQL</td>
+                            </tr>
+                            <tr class="danger">
+                                <td>C++</td>
+                            </tr>
+                            <tr class="danger">
+                                <td>Lua</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -232,15 +259,29 @@
                 <div class="panel panel-default">
                     <table class="table table-hover">
                         <thead>
-                            <tr><th class="text-center">Frameworks / Libraries</th></tr>
+                            <tr>
+                                <th class="text-center">Frameworks / Libraries</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr class="success"><td><a href="http://getbootstrap.com/">Bootstrap 3</a></td></tr>
-                            <tr class="info"><td><a href="https://en.wikipedia.org/wiki/.NET_Framework">WinForms</a></td></tr>
-                            <tr class="info"><td><a href="https://en.wikipedia.org/wiki/Windows_Communication_Foundation">WCF</a></td></tr>
-                            <tr class="warning"><td><a href="https://en.wikipedia.org/wiki/Microsoft_XNA">Microsoft XNA</a></td></tr>
-                            <tr class="danger"><td><a href="https://angularjs.org/">AngularJS</a></td></tr>
-                            <tr class="danger"><td><a href="https://love2d.org/">LÖVE</a></td></tr>
+                            <tr class="success">
+                                <td><a href="http://getbootstrap.com/">Bootstrap 3</a></td>
+                            </tr>
+                            <tr class="info">
+                                <td><a href="https://en.wikipedia.org/wiki/.NET_Framework">WinForms</a></td>
+                            </tr>
+                            <tr class="info">
+                                <td><a href="https://en.wikipedia.org/wiki/Windows_Communication_Foundation">WCF</a></td>
+                            </tr>
+                            <tr class="warning">
+                                <td><a href="https://en.wikipedia.org/wiki/Microsoft_XNA">Microsoft XNA</a></td>
+                            </tr>
+                            <tr class="danger">
+                                <td><a href="https://angularjs.org/">AngularJS</a></td>
+                            </tr>
+                            <tr class="danger">
+                                <td><a href="https://love2d.org/">LÖVE</a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -250,14 +291,26 @@
                 <div class="panel panel-default">
                     <table class="table table-hover">
                         <thead>
-                            <tr><th class="text-center">Game Dev Software</th></tr>
+                            <tr>
+                                <th class="text-center">Game Dev Software</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr class="info"><td><a href="https://unity3d.com/">Unity 3D</a></td></tr>
-                            <tr class="warning"><td><a href="https://www.yoyogames.com/studio">Game Maker</a></td></tr>
-                            <tr class="warning"><td><a href="https://www.adobe.com/products/flash.html">Adobe Flash CS5.5</a></td></tr>
-                            <tr class="danger"><td><a href="https://www.unrealengine.com/what-is-unreal-engine-4">Unreal Engine 4</a></td></tr>
-                            <tr class="danger"><td><a href="https://www.rpgmakerweb.com/">RPG maker</a></td></tr>
+                            <tr class="info">
+                                <td><a href="https://unity3d.com/">Unity 3D</a></td>
+                            </tr>
+                            <tr class="warning">
+                                <td><a href="https://www.yoyogames.com/studio">Game Maker</a></td>
+                            </tr>
+                            <tr class="warning">
+                                <td><a href="https://www.adobe.com/products/flash.html">Adobe Flash CS5.5</a></td>
+                            </tr>
+                            <tr class="danger">
+                                <td><a href="https://www.unrealengine.com/what-is-unreal-engine-4">Unreal Engine 4</a></td>
+                            </tr>
+                            <tr class="danger">
+                                <td><a href="https://www.rpgmakerweb.com/">RPG maker</a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -266,23 +319,40 @@
                 <div class="panel panel-default">
                     <table class="table table-hover">
                         <thead>
-                            <tr><th class="text-center">Other Skills</th></tr>
+                            <tr>
+                                <th class="text-center">Other Skills</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr class="success"><td>Zerg (StarCraft 2)</td></tr>
-                            <tr class="info"><td>Weight Lifting</td></tr>
-                            <tr class="info"><td>Sound Design</td></tr>
-                            <tr class="warning"><td>UX Design</td></tr>
-                            <tr class="warning"><td>Music Composition</td></tr>
-                            <tr class="danger"><td><a href="https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language">SAML</a></td></tr>
+                            <tr class="success">
+                                <td>Zerg (StarCraft 2)</td>
+                            </tr>
+                            <tr class="info">
+                                <td>Weight Lifting</td>
+                            </tr>
+                            <tr class="info">
+                                <td>Sound Design</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>UX Design</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>Music Composition</td>
+                            </tr>
+                            <tr class="danger">
+                                <td><a href="https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language">SAML</a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+    <div id="About">
+        <br />
+    </div>
     <div class="container text-center">
-        <div class="page-header" id="About">
+        <div class="page-header">
             <h1>About Me</h1>
         </div>
         <div class="row">
@@ -291,7 +361,8 @@
                 <hr class="responsive-line-break-sm" />
             </div>
             <div class="col-sm-10 col-xs-12">
-                <p> <!--I am an undergraduate student at University of Colorado at Colorado Springs majoring in Game Design. 
+                <p>
+                    <!--I am an undergraduate student at University of Colorado at Colorado Springs majoring in Game Design. 
                     My intended time to graduate is Spring 2013.
 			        My coding languages include: C++, C#/XNA, Python, ActionScript 3.0, HTML/CSS, JavaScript/Ajax
 
@@ -304,44 +375,93 @@
                     For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
 Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
 In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
 
                 </p>
             </div>
         </div>
     </div>
+    <div id="Resume">
+        <br />
+    </div>
     <div class="container text-center">
-        <div class="page-header" id="Resume">
+        <div class="page-header">
             <h1>Resume</h1>
         </div>
         <div class="row">
-            Nope.
+            For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+            
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+            
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+            
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+            
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+            
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+
         </div>
     </div>
+    <div id="Contact">
+        <br />
+    </div>
     <div class="container text-center">
-        <div class="page-header" id="Contact">
+        <div class="page-header">
             <h1>Contact</h1>
         </div>
         <div class="row">
+            For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+            
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+            
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
+            
+                    For each "cell" I spawn a Rectangle of random width and length within some radius. Again the radius doesn't matter too much, but it should probably be proportionate to the number of cells.
+Instead of using uniformly distributed random numbers (the default Math.random generator in most languages), I'm using Park-Miller Normal Distribution[3] . This skews the size of the cells so that they are more likely to be of a small size (more smaller cells, less larger cells). The reason for this will be explained later!
+In addition to this I ensure that the ratio between the width and length of each cell is not too large, we don't want perfectly square rooms but neither do we want really skinny ones, but somewhere in between.
             madodds at gmail <i>doot</i> com
         </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-	================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Bootstrap core JavaScript -->
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- AngularJS <ng-include src="'partials/randomIdea.html'"></ng-include> <script type=text/ng-template id=randomIdea.html>
-        <span>Hello {{name}}</span>
-    </script>-->
-    <script type="text/javascript" src="js/angularjs-1.4.4/angular.min.js"></script>
-    <script type="text/javascript" src="js/randomIdea.min.js"></script> 
-
-    <!-- Opt-in Tooltips -->
+    <!-- Opt-in Tooltips for bootstrap -->
     <script>$(function () { $('[data-toggle="tooltip"]').tooltip({ container: 'body' }) })</script>
+    <!-- Active NavBar for bootstrap -->
+    <script>
+        $('body').scrollspy({ target: '#navbar-controller' });
+        $('[data-spy="scroll"]').each(function () { var $spy = $(this).scrollspy('refresh') });
+    </script>
+
+    <!-- AngularJS for randomIdea app -->
+    <script type="text/javascript" src="js/angularjs-1.4.4/angular.min.js"></script>
+    <script type="text/javascript" src="js/randomIdea.min.js"></script>
 </body>
 </html>
