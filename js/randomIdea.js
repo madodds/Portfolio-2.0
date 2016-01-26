@@ -12,7 +12,7 @@ angular.module('AngularApp', [])
           .success(function (data) {
             JSONdata = data;
             $scope.getFailed = false;
-            $scope.placeholderText = 'Press the Generate Idea button';
+            $scope.placeholderText = 'Press the Generate Idea button!';
           })
           .error(function () {
             disable();

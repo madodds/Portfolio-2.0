@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="The portfolio website for Matthew Dodds">
+    <meta name="author" content="Matthew Dodds">
+    <link rel="icon" href="images/favicon.png">
 
-    <!-- TODO: favIcon -->
-    <link rel="icon" href="images/favicon.ico">
-
-    <title>Theme Template for Bootstrap</title>
+    <title>Dodds Game Development</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -118,9 +116,8 @@
                     I later refactored / de-bugged the code and <a href="https://github.com/madodds/GGJ-ItTakesAVillage">put it on GitHub</a>, where you can learn more and see the source code.
                 </p>
                 <div>
-                    <!-- TODO: Fix the youtube link -->
                     <span class="fa-stack fa-3x social-box">
-                        <a href="https://youtu.be/CkTIU7_RndQ">
+                        <a href="https://youtu.be/jBLfM7koujg">
                             <i class="fa fa-circle fa-stack-2x social-outer"></i>
                             <i class="fa fa-youtube-play fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="Watch Demo"></i>
                         </a>
@@ -137,38 +134,45 @@
             <div class="col-lg-4 col-md-6">
                 <h2>Game Idea Generator</h2>
                 <h4><a href="https://angularjs.org/">AngularJS</a> 1.4.4 / C# <a href="https://en.wikipedia.org/wiki/Windows_Forms">WinForms</a> - 2015</h4>
-                <div ng-app="AngularApp" ng-controller="ideaCtrl">
-                    <div class="q-well-wrapper">
-                        <div class="q-well-main">
-                            <div class="q-well-bottom">
-                                <div>
-                                    <button class="btn btn-default q-btn-smToDefault pulsingShadow" ng-disabled="getFailed" ng-click="getIdea()">Generate Idea</button>
-                                    <!--<a class="btn btn-default q-btn-smToDefault" data-toggle="tooltip" data-placement="bottom" title="View on GitHub" href="https://github.com/madodds/Game-Idea-Generator"><i class="fa fa-github-alt fa-lg"></i></a>-->
-                                    <a class="btn btn-default q-btn-smToDefault" ng-disabled="noUrl()" ng-href="{{engineUrl}}">Engine Website</a>
-                                </div>
-                            </div>
-                            <p><span ng-bind="idea"></span></p>
-                            <p><span ng-bind="engineInfo"></span></p>
-                            <p class="h1 q-text-muted"><b><span ng-bind="placeholderText">Loading...</span></b></p>
-                        </div>
-                    </div>
-                </div>
-                <p>
-                    The Game Idea Generator randomly generates an idea for a video game project. 
-                    This was originally written in C# windows forms, which you can find on GitHub. 
-                </p>
-                <p>
-                    The idea's attributes are retrieved from a <a href="https://github.com/madodds/Game-Idea-Generator/blob/master/Attributes.json">JSON file on my GitHub account.</a>
-                    The attributes chosen are based on randomly generated numbers that are unique to each other. 
-                    These numbers get placed into the index of 5 arrays: Genres, Perks, Settings, Styles, and Engines.
-                </p>
-                <span class="fa-stack fa-3x social-box">
-                    <a href="https://github.com/madodds/Game-Idea-Generator">
-                        <i class="fa fa-circle fa-stack-2x social-outer"></i>
-                        <i class="fa fa-github-alt fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View on GitHub"></i>
-                    </a>
-                </span>
-                <hr class="responsive-line-break-md" />
+				<div ng-app="AngularApp" ng-controller="ideaCtrl">
+					<div class="q-well-wrapper">
+						<div class="q-well-main">
+							<div class="q-well-bottom">
+								<div>
+									<button class="btn btn-default q-btn-smToDefault pulsingShadow" ng-disabled="getFailed" ng-click="getIdea()">Generate Idea</button>
+									<a class="btn btn-default q-btn-smToDefault" ng-disabled="noUrl()" ng-href="{{engineUrl}}">Engine Website</a>
+								</div>
+							</div>
+							<p><span ng-bind="idea"></span></p>
+							<p><span ng-bind="engineInfo"></span></p>
+							<p class="h1 q-text-muted"><b><span ng-bind="placeholderText">Loading...</span></b></p>
+						</div>
+					</div>
+					<p>
+						The Game Idea Generator randomly generates an idea for a video game project.
+						This was originally written in C# windows forms, which you can find on GitHub.
+						I rewrote it in AngularJS just to see what it was like.
+					</p>
+					<p>
+						The idea's attributes are retrieved from a <a href="https://github.com/madodds/Game-Idea-Generator/blob/master/Attributes.json">JSON file on my GitHub account.</a>
+						The attributes chosen are based on randomly generated numbers that are unique to each other.
+						These numbers get placed into the index of 5 arrays: Genres, Perks, Settings, Styles, and Engines.
+					</p>
+					<span class="fa-stack fa-3x social-box">
+						<a href="https://github.com/madodds/Game-Idea-Generator">
+							<i class="fa fa-circle fa-stack-2x social-outer"></i>
+							<i class="fa fa-github-alt fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View on GitHub"></i>
+						</a>
+					</span>
+					<!-- The getIdea() appears twice for a greater chance that someone will click it. -->
+					<span class="fa-stack fa-3x social-box">
+						<a ng-click="getIdea()">
+							<i class="fa fa-circle fa-stack-2x social-outer"></i>
+							<i class="fa fa-flask fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="Generate Idea!"></i>
+						</a>
+					</span>
+					<hr class="responsive-line-break-md" />
+				</div>
             </div>
             <div class="clearfix visible-md-block"></div>
             <div class="col-lg-4 col-md-12">
@@ -186,24 +190,26 @@
                 </p>
                 <div>
                     <!-- TODO: Fix ALL the links -->
+					<!--
                     <span class="fa-stack fa-3x social-box">
                         <a href="#">
                             <i class="fa fa-circle fa-stack-2x social-outer"></i>
                             <i class="fa fa-youtube-play fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="Watch Demo"></i>
                         </a>
-                    </span>
+                    </span>-->
                     <span class="fa-stack fa-3x social-box">
                         <a href="#">
                             <i class="fa fa-circle fa-stack-2x social-outer"></i>
-                            <i class="fa fa-gamepad fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="Play Sphere Dash"></i>
+                            <i class="fa fa-download fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="Download Sphere Dash"></i>
                         </a>
                     </span>
+					<!--
                     <span class="fa-stack fa-3x social-box">
                         <a href="#">
                             <i class="fa fa-circle fa-stack-2x social-outer"></i>
                             <i class="fa fa-github-alt fa-stack-1x social-inner" data-toggle="tooltip" data-placement="bottom" title="View on GitHub"></i>
                         </a>
-                    </span>
+                    </span>-->
                 </div>
                 <hr class="responsive-line-break-md" />
             </div>
@@ -230,9 +236,9 @@
                             <tr class="success">
                                 <td>C#</td>
                             </tr>
-                            <tr class="info">
-                                <td>HTML / CSS</td>
-                            </tr>
+							<tr class="info">
+								<td>PowerShell</td>
+							</tr>
                             <tr class="warning">
                                 <td>JavaScript</td>
                             </tr>
@@ -273,6 +279,9 @@
                             <tr class="info">
                                 <td><a href="https://en.wikipedia.org/wiki/Windows_Communication_Foundation">WCF</a></td>
                             </tr>
+							<tr class="warning">
+								<td><a href="https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx">Team Foundation Server</a></td>
+							</tr>
                             <tr class="warning">
                                 <td><a href="https://en.wikipedia.org/wiki/Microsoft_XNA">Microsoft XNA</a></td>
                             </tr>
@@ -327,6 +336,9 @@
                             <tr class="success">
                                 <td>Zerg (StarCraft 2)</td>
                             </tr>
+							<tr class="info">
+								<td>HTML / CSS</td>
+							</tr>
                             <tr class="info">
                                 <td>Weight Lifting</td>
                             </tr>
